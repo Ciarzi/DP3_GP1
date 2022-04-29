@@ -1,5 +1,8 @@
-# DP3_GP1
-Data Project 3.
+# Data Project 3 Modelo Predictor - Grupo 1 - BBank
+
+# Proyecto
+El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una entidad bancaria a través de un modelo predictor.
+
 
 ## Meet our team
 
