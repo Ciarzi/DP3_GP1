@@ -6,10 +6,10 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 
 ## Meet our team
 
-- [Hermán Redondo Lázaro](https://github.com/Ciarzi)
 - [Pablo Bottero Gandía](https://github.com/aloa04)
 - [Thais Casares González](https://github.com/thais1987)
 - [Ramón Casans Camp](https://github.com/racasc)
+- [Hermán Redondo Lázaro](https://github.com/Ciarzi)
 - [José Luis Rodríguez Albert](https://github.com/joselra98)
 - [Sergi Joan Sastre Antequera](https://github.com/mac-sanmartin)
 
