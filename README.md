@@ -12,5 +12,5 @@ Data Project 3.
 
 
 <p align="center">
-   <img src="https://github.com/Ciarzi/DP3_GP1/tree/main/Logo" alt="[YOUR_ALT]"/>
+   <img src="https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/Logo_Banco.png" alt="[YOUR_ALT]"/>
 </p>
