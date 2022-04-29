@@ -9,3 +9,8 @@ Data Project 3.
 - [Ramón Casans Camp](https://github.com/racasc)
 - [José Luis Rodríguez Albert](https://github.com/joselra98)
 - [Sergi Joan Sastre Antequera](https://github.com/mac-sanmartin)
+
+
+<p align="center">
+   <img src="https://github.com/Ciarzi/DP3_GP1/tree/main/Logo" alt="[YOUR_ALT]"/>
+</p>
