@@ -11,7 +11,7 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 - [Ramón Casans Camp](https://github.com/racasc)
 - [Hermán Redondo Lázaro](https://github.com/Ciarzi)
 - [José Luis Rodríguez Albert](https://github.com/joselra98)
-- [Sergi Joan Sastre Antequera]()
+- [Sergi Joan Sastre Antequera](https://github.com/sergijoan22)
 
 
 <p align="center">
