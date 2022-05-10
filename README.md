@@ -15,7 +15,7 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 
 
 # Proceso para calcular el riesgo crediticio
-# 1.- Prerequisitos
+# 1.- Prerrequisitos
 
 # 2.- Transformación de los datos
 Para ello, hemos decidido juntar todos los data sets en uno así como añadir y quitar variables.
@@ -60,7 +60,9 @@ Entre los data sets nuevos se encuentran:
 
 # 3.- Transformación del input
 Clustering
+
 Feature importances
+
 PCA
 # 4.- Entrenamiento y modelo final
 
