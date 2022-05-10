@@ -4,7 +4,7 @@
 El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una entidad bancaria a través de un modelo predictor.
 
 
-# Meet our team
+# Meet the team
 
 - [Pablo Bottero Gandía](https://github.com/aloa04)
 - [Thais Casares González](https://github.com/thais1987)
@@ -15,23 +15,26 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 
 
 # Proceso para calcular el riesgo crediticio
+# 1.- Prerequisitos
 
-1.- Lo primero que hemos hecho ha sido transformar los datos. Para ello, hemos decidido juntar todos los data sets en uno. También hemos codificado los datos además de haber añadido y quitado variables.
+# 2.- Transformación de los datos
+Para ello, hemos decidido juntar todos los data sets en uno así como añadir y quitar variables.
+Además, hemos decidido crear data sets propios con información como la localización y el PIB per cápita.
 
-1.1.- Variables eliminadas:
+2.1.- Variables eliminadas:
+Algunas variables han sido eliminadas porque lo que buscamos es predecir si un cliente devolverá o no un préstamo y consideramos que no aportan información útil al modelo predictivo. 
+Estas variables han sido:
+- “customerid”, “systemloanid”, debido a que tan solo identifican al cliente.
+- “approveddate”, “creationdate”, debido a que la hora de creación, en todos los casos, es una hora después de la aprobación del préstamo.
+- “bank_name_clients”, “bank_branch_clients”, debido a que aportan el nombre y la sucursal de cada banco y nada del cliente en sí.
 
-Algunas variables han sido eliminadas porque lo que buscamos es predecir si un cliente devolverá o no un préstamo y consideramos que no aportan información útil al modelo predictivo.
-Estas variables han sido “customerid”, “systemloanid” (estas se deben a que tan solo identifican al cliente), “approveddate”, “creationdate” (estas se deben a que la hora de creación, en todos los casos, es una hora después de la aprobación del préstamo), “bank_name_clients”, “bank_branch_clients” (estas se deben a que aportan el nombre y la sucursal de cada banco y nada del cliente en sí)
-
-1.2.- Variables usadas
-
-Una vez eliminadas las variables necesarias, el siguiente paso ha sido transformar las ya existentes para poder usarlas adecuadamente. Las variables usadas en la base de datos final han sido:
-
+2.2.- Variables usadas
+Una vez eliminadas las variables no necesarias, el siguiente paso ha sido transformar las ya existentes para poder usarlas adecuadamente. Las variables usadas han sido:
 -	“historial”: lo primero para crear esta variable ha sido transformar las variables “firstduedate” y “firstrepaiddate” a un formato diferente para poder trabajar con ellas. Lo siguiente ha sido otorgar un valor negativo a aquellos préstamos que no han sido devueltos dentro de su plazo y un valor positivo a aquellos que sí lo han sido. Finalmente, aquellos usuarios que han acabado con una puntuación cero o negativa han sido asignados un “0” y quienes han acabado con una puntuación positiva un “1”.
 
 -	“loannumber”: esta variable no ha sido modificada, representa el número de préstamos que un cliente ha pedido con anterioridad.
 
--	“referido”: para esta variable hemos tenido en cuenta la de “historial”. A aquellos clientes que han sido referidos por un cliente con un mal historial de pagos se les ha asignado un “0”. Quienes no han sido referidos han sido asignados un “1”.  Aquel cliente que ha sido referido por otro cliente sin historial de pagos ha sido asignado con un “2” y a quienes han sido referidos por un cliente con un buen historial de pagos se les ha asignado un “3”.
+-	“referido”: para esta variable hemos tenido en cuenta la de “historial”. A aquellos clientes que han sido referidos por un cliente con un mal historial de pagos se les ha asignado un “0”. Quienes no han sido referidos han sido asignados un “1”. Aquel cliente que ha sido referido por otro cliente sin historial de pagos ha sido asignado con un “2” y a quienes han sido referidos por un cliente con un buen historial de pagos se les ha asignado un “3”.
 
 -	“flag”: dado que esta es la variable que tenemos que predecir no se ha modificado
 
@@ -41,8 +44,24 @@ Una vez eliminadas las variables necesarias, el siguiente paso ha sido transform
 
 -	“due_per_day”: representa el total a pagar de cada préstamo por día. Se ha calculado diviendo la variable “totaldue” entre “termdays”.
 
--	“interes”:  esta nueva variable representa el interés por cada día de préstamo. Ha sido calculada al restar “loanamount”  a “totaldue” y dividir el resultado entre “termdays”.
+-	“interes”: esta nueva variable representa el interés por cada día de préstamo. Ha sido calculada al restar “loanamount” a “totaldue” y dividir el resultado entre “termdays”.
 
 -	“cuenta_corriente”, “cuenta_otra” y “cuenta_ahorro”: estas tres nuevas variables proceden de “bank_account_type”. Surgen de haber hecho one hot encoding con el objetivo de separar las respuestas dentro de la variable en lo que se conoce como “dummy variables”.
 
 -	“employment”: esta variable es el resultado de codificar la variable “employment_status_client” de manera que aquellos clientes jubilados, desempleados o estudiantes han sido asignados un “0”. A quienes no han aportado esta información a la base de datos se les ha asignado un “1” y quienes cuentan con un empleo fijo, temporal o son autónomos se les ha asignado un “2”.
+
+2.3 .- Data sets nuevos
+Entre los data sets nuevos se encuentran:
+-	“datos_localizacion”: en esta base de datos se ha asignado a cada cliente un país en base a sus coordenadas, dadas en los data sets originales.
+
+-	“mundo_pib_capita.csv”: dado que con el anterior data set se han asignado países varios, vemos necesario comparar los distintos PIB.
+
+-	“nigeria_pib_capita.csv”: a excepción de no llega 50 resultados, todos los clientes proceden de Nigeria, por lo que hemos decidido también comparar los PIB de cada estado de Nigeria.
+
+# 3.- Transformación del input
+Clustering
+Feature importances
+PCA
+# 4.- Entrenamiento y modelo final
+
+
