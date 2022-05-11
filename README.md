@@ -52,6 +52,8 @@ Una vez eliminadas las variables no necesarias, el siguiente paso ha sido transf
 
 -	“employment”: esta variable es el resultado de codificar la variable “employment_status_client” de manera que aquellos clientes jubilados, desempleados o estudiantes han sido asignados un “0”. A quienes no han aportado esta información a la base de datos se les ha asignado un “1” y quienes cuentan con un empleo fijo, temporal o son autónomos se les ha asignado un “2”.
 
+-	
+
 2.3.- Variables descartadas
 
 Hemos probado a integrar datos externos que finalmente no hemos acabado usando debido a su falta de correlación.
@@ -62,7 +64,7 @@ Hemos probado a integrar datos externos que finalmente no hemos acabado usando d
 -	“nigeria_pib_capita.csv”: a excepción de no llega 50 resultados, todos los clientes proceden de Nigeria, por lo que hemos decidido también comparar los PIB de cada estado de Nigeria.
 
 # 3.- Transformación del input
-Clustering
+**Clustering**
 
 Ahora agruparemos los clientes en grupos, llamados clústeres. Dependiendo de las similitudes entre estos saldrán varios grupos. Para ello hemos usados el método de k-means.
 
@@ -73,8 +75,12 @@ El número de clústeres a usar depende del resultado que nos de el método “e
 </p>
 
 
-PCA
-
+**PCA**
+El objetivo ahora es simplificar la características correlacionadas para así reducir las dimensiones y comprobar si aumenta la precisión.
+Al haber reducido las dimensione vemos que no hay ninguna correlación con lo que no vale para nada
+<p align="center">
+   <img src=" https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/APC.jpg" alt="[YOUR_ALT]"/>
+</p>
 
 # 4.- Entrenamiento y modelo final
 
