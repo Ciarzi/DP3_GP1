@@ -79,7 +79,7 @@ El número de clústeres a usar depende del resultado que nos de el método “e
 El objetivo ahora es simplificar la características correlacionadas para así reducir las dimensiones y comprobar si aumenta la precisión.
 Al haber reducido las dimensione vemos que no hay ninguna correlación con lo que no vale para nada
 <p align="center">
-   <img src=" https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/APC.jpg" alt="[YOUR_ALT]"/>
+   <img src=" https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/APC.png" alt="[YOUR_ALT]"/>
 </p>
 
 # 4.- Entrenamiento y modelo final
