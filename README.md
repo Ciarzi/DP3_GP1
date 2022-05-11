@@ -18,6 +18,8 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 # 1.- Prerrequisitos
 Los archivos necesarios para llevar a cabo el Data Project se encuentran en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/datasets/own_data), son data sets creados al transformar los del enunciado, situados en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/datasets)
 
+Todo el código necesario para llevar a cabo el Data Project se encuentran en las carpetas [classificator](https://github.com/Ciarzi/DP3_GP1/tree/main/classificator) y [codigo](https://github.com/Ciarzi/DP3_GP1/tree/main/codigo)
+
 # 2.- Transformación de los datos
 Para ello, hemos decidido juntar todos los data sets en uno así como añadir y quitar variables.
 Además, hemos decidido crear data sets propios con información como la localización y el PIB per cápita.
