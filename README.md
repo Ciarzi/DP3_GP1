@@ -52,8 +52,6 @@ Una vez eliminadas las variables no necesarias, el siguiente paso ha sido transf
 
 -	“employment”: esta variable es el resultado de codificar la variable “employment_status_client” de manera que aquellos clientes jubilados, desempleados o estudiantes han sido asignados un “0”. A quienes no han aportado esta información a la base de datos se les ha asignado un “1” y quienes cuentan con un empleo fijo, temporal o son autónomos se les ha asignado un “2”.
 
--	
-
 2.3.- Variables descartadas
 
 Hemos probado a integrar datos externos que finalmente no hemos acabado usando debido a su falta de correlación.
@@ -86,12 +84,19 @@ Al haber reducido las dimensione vemos que no hay ninguna correlación con lo qu
 </p>
 
 
-# 4.- Entrenamiento y modelo final
+# 4.- Entrenamiento del modelo
 
 Teniendo ya todo listo pasamos a entrenar los modelos y medir el porcentaje de validación.
 
-Para ello ejecutaremos el código que se encuentra en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/codigo), los archivos llamados "Clusterizacion_test.ipynb" y "Clusterizacion_train.ipynb"
+Para ello ejecutaremos el código que se encuentra en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/classificator), el archivo llamado "loan_prediction.ipynb"
 
-# 5.- 
+<p align="center">
+   <img src="https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/predicted.png" alt="[YOUR_ALT]"/>
+</p>
 
+# 5.- Modelo final
+
+Una vez hemos entrenado el modelo, configuraremos los hiperparámetros usando la función "scale_pos_weight" para obtener un mejor resultado.
+
+Ya con todo obtenemos una precisión del 0.799265605875153
 
