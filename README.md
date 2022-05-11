@@ -16,6 +16,7 @@ El objetivo de este tercer Data Project es evaluar el riesgo crediticio en una e
 
 # Proceso para calcular el riesgo crediticio
 # 1.- Prerrequisitos
+Los archivos necesarios para llevar a cabo el Data Project se encuentran en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/datasets/own_data), son data sets creados al transformar los del enunciado, situados en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/datasets)
 
 # 2.- Transformación de los datos
 Para ello, hemos decidido juntar todos los data sets en uno así como añadir y quitar variables.
@@ -27,6 +28,7 @@ Estas variables han sido:
 - “customerid”, “systemloanid”, debido a que tan solo identifican al cliente.
 - “approveddate”, “creationdate”, debido a que la hora de creación, en todos los casos, es una hora después de la aprobación del préstamo.
 - “bank_name_clients”, “bank_branch_clients”, debido a que aportan el nombre y la sucursal de cada banco y nada del cliente en sí.
+- “level_of_education_clients”, debido a la gran cantidad de datos vacíos.
 
 2.2.- Variables usadas
 Una vez eliminadas las variables no necesarias, el siguiente paso ha sido transformar las ya existentes para poder usarlas adecuadamente. Las variables usadas han sido:
@@ -50,8 +52,9 @@ Una vez eliminadas las variables no necesarias, el siguiente paso ha sido transf
 
 -	“employment”: esta variable es el resultado de codificar la variable “employment_status_client” de manera que aquellos clientes jubilados, desempleados o estudiantes han sido asignados un “0”. A quienes no han aportado esta información a la base de datos se les ha asignado un “1” y quienes cuentan con un empleo fijo, temporal o son autónomos se les ha asignado un “2”.
 
-2.3 .- Data sets nuevos
-Entre los data sets nuevos se encuentran:
+2.3.- Variables descartadas
+
+Hemos probado a integrar datos externos que finalmente no hemos acabado usando debido a su falta de correlación.
 -	“datos_localizacion”: en esta base de datos se ha asignado a cada cliente un país en base a sus coordenadas, dadas en los data sets originales.
 
 -	“mundo_pib_capita.csv”: dado que con el anterior data set se han asignado países varios, vemos necesario comparar los distintos PIB.
@@ -61,9 +64,23 @@ Entre los data sets nuevos se encuentran:
 # 3.- Transformación del input
 Clustering
 
-Feature importances
+Ahora agruparemos los clientes en grupos, llamados clústeres. Dependiendo de las similitudes entre estos saldrán varios grupos. Para ello hemos usados el método de k-means.
+
+El número de clústeres a usar depende del resultado que nos de el método “elbow”, en nuestro caso k=3.
+
+<p align="center">
+   <img src="https://github.com/Ciarzi/DP3_GP1/blob/main/Logo/elbow.png" alt="[YOUR_ALT]"/>
+</p>
+
 
 PCA
+
+
 # 4.- Entrenamiento y modelo final
+
+Teniendo ya todo listo pasamos a entrenar los modelos y medir el porcentaje de validación.
+Para ello ejecutaremos el código que se encuentra en [esta carpeta](https://github.com/Ciarzi/DP3_GP1/tree/main/codigo), los archivos llamados "Clusterizacion_test.ipynb" y "Clusterizacion_train.ipynb"
+
+# 5.- 
 
 
